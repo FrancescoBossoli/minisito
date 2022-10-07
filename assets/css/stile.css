@@ -1,0 +1,458 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: #000;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+h2, h3 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+h4 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+p {
+  padding-block: 1.5rem;
+  font-size: 65%;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+#menudots, .icon, #menuVerticale a {
+  color: #e42424;
+}
+.contatti {
+  color: black;
+}
+.pulsante, #menuVerticale .pulsante {
+  background: linear-gradient(to right, #6cc1e2, #392f7a);
+  color: white;
+  padding: 0.6rem 1rem;
+}
+.pulsante {
+  line-height: 1.9rem;
+}
+/* HEADER */
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px #d3d3d3;
+  display: grid;
+  align-items: center;
+  padding: 0.8rem 0.9rem 0.5rem 0.9rem;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+#epicode {
+  grid-area: 1 / 1 / 1 / 5;
+}
+#epicode img {
+  height: 2.4rem;
+}
+#menudots {
+  font-size: 1.6rem;
+  order: 3;
+  grid-area: 1 / 5 / 1 / 5;
+  padding-bottom: 0.5rem;
+  text-align: right;
+}
+#menuVerticale {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  grid-area: 2 / 1 / 2 / 5;
+  padding-left: 1.9rem;
+  line-height: 2.2;
+  font-size: 70%;
+}
+#menuVerticale ul, #info ul {
+  list-style: none;
+}
+#menuVerticale a {
+  text-transform: uppercase;
+}
+#menuMobile:checked + #menuVerticale {
+  height: 9.5rem;
+}
+#menuMobile {
+  display: none;
+}
+/* MAIN */
+#futuro {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: 50%;
+  filter: grayscale(50%);
+  min-height: 200px;
+  max-height: 420px;
+  width: 100%;
+  color: white;
+  text-shadow: 3px 3px 8px black;
+}
+#futuro div {
+  margin-inline: 1.3rem;
+  padding-block: 2.8rem;
+}
+@keyframes battito {
+  from {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.089);
+  }
+  40% {
+    box-shadow: 0px 0px 10px 12px rgba(0, 0, 0, 0.479);
+  }
+  80% {
+    box-shadow: 0px 6px 20px 08px rgba(0, 0, 0, 0.747);
+  }
+  80% {
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0);
+  }
+}
+
+#futuro .pulsante {
+  animation: battito 2s infinite ease-in;
+}
+h1 {
+  font-size: 190%;
+  line-height: 1.2;
+}
+.pulsante {
+  font-size: 80%;
+  padding-block: 0.85rem;
+}
+#obbiettivi {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+h2, h3, .icon {
+  font-size: 160%;
+}
+#motivazioni .icon {
+  display: block;
+}
+#motivazioni h4 {
+  line-height: 1;
+}
+#developer {
+  background-color: #0c0633;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding-block: 5.5rem;
+}
+#avvenire {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem 1rem;
+}
+#avvenire img {
+  width: 100%;
+  max-width: 320px;
+}
+.previsioni h4 {
+  display: inline;
+}
+.previsioni .icon {
+  font-size: 1.6rem;
+}
+.previsioni p {
+  padding-block: 0.7rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(238, 238, 238);
+  padding: 3rem 2.5rem;
+}
+#info h4 {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+footer p {
+  font-size: 65%;
+  line-height: 1.6;
+}
+#info li {
+  display: inline;
+  font-size: 130%;
+}
+#info nav {
+  padding-block: 0.8rem 2.2rem;
+  font-size: 0.9rem;
+}
+
+#info input[type="email" i] {
+  padding: 0;
+  width: 99%;
+  background: none;
+  border: none;
+}
+#info .pulsante {
+  width: 100%;
+  height: 3.4rem;
+  border: none;
+  box-shadow: -1px -1px 6px 2px white, 1px 1px 1px darkblue;
+  font-size: 1.2rem;
+}
+#info fieldset {
+  margin-top: 1.2rem;
+  border: 1px solid black;
+  background-color: white;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem 1rem 0.9rem;
+  }
+  p {
+    font-size: 70%;
+  }
+  #menudots {
+    display: none;
+  }
+  #menuVerticale {
+    height: initial;
+  }
+  #menuVerticale ul {
+    display: flex;
+    height: 3.2rem;
+    align-items: center;
+  }
+  #menuVerticale a {
+    text-transform: none;
+    padding-inline: 1rem;
+    font-size: 110%;
+    color: #333;
+  }
+  #menuVerticale .pulsante {
+    padding-block: 1rem;
+  }
+  #futuro {
+    min-height: 450px;
+    max-height: 490px;
+  }
+  #futuro div {
+    padding: 6rem 6.5rem;
+  }
+  #motivazioni {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #motivazioni div {
+    width: 25%;
+  }
+  #motivazioni p {
+    text-align: left;
+  }
+  #avvenire {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #avvenire img {
+    width: 100%;
+    max-width: 350px;
+  }
+  #avvenire h4 {
+    font-size: 1.8rem;
+  }
+  footer {
+    padding-inline: 4rem;
+  }
+
+  #info {
+    display: flex;
+    justify-content: space-between;
+  }
+  #info div {
+    width: 28%;
+  }
+}
+@media screen and (min-width: 1170px) {
+  header {
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 15% 1rem 15%;
+  }
+  #epicode img {
+    height: 3.2rem;
+  }
+  #menuVerticale ul {
+    height: 3.5rem;
+  }
+  #menuVerticale .pulsante {
+    padding-block: 1.4rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  #futuro div {
+    padding: 10% 20% 10% 20%;
+  }
+  p, #info p, #copyright {
+    font-size: 80%;
+  }
+  #obbiettivi {
+    padding-inline: 5%;
+  }
+  #avvenire {
+    padding-inline: 20%;
+  }
+  #info h4 {
+    font-size: 100%;
+  }
+  #info p {
+    font-size: 80%;
+  }
+  #copyright {
+    text-align: center;
+  }
+}
+
+#presentazione, #corsi {
+  margin-inline: 2rem;
+}
+#presentazione {
+  text-align: center;
+  margin-top: 3rem;
+}
+#presentazione img {
+  width: 100%;
+}
+#presentazione p {
+  padding-top: 0.5rem;
+}
+
+#corsi table {
+  font-size: small;
+  width: 100%;
+}
+caption {
+    font-size: 2rem;
+}
+tbody tr:nth-child(odd) {
+  background-color: #d2dce7;
+}
+thead {
+  display: none;
+}
+td {
+  display: flex;  
+  padding: .5rem;
+  text-align: left;
+}
+td::before {
+  content: attr(title);
+  font-weight: 700;
+  min-width: 7rem;
+}
+th {
+  background-color: #5f82a3;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #presentazione {
+    margin-block: 3rem 5rem;
+    display: grid;
+    column-gap: 5%;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+  }
+  #slogan {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+  thead {
+    display:table-header-group;
+  }
+  
+  td::before {
+    content:none;
+  }
+  td, th {
+    display:table-cell;
+    text-align: center;
+    justify-content: center;    
+  }
+}
+
+#contattaci {
+  padding-inline: 2rem;
+}
+
+#contattaci h1 {
+  padding-block: 4rem 1.5rem;
+  text-align: center;
+}
+#contatto fieldset, #infoUtili address {
+  display: flex;
+  flex-direction: column;
+}
+#contatto input {
+  margin-bottom: 1rem;
+  height: 2rem;
+  padding-inline: 1rem;
+  font-style: italic;
+}
+#contatto #messaggio {
+  height: 4rem;
+  letter-spacing: 2px;
+}
+#contatto .pulsante {
+  width: 60%;
+  align-self: center;
+  box-shadow: -1px -1px 6px 2px white, 1px 1px 1px darkblue;
+  font-size: 1.2rem;
+  border: none;
+}
+#infoUtili {
+  text-align: center;
+  padding: 2rem;
+}
+#infoUtili a {
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  #contattaci {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+  }
+  #contattaci h1 {
+    grid-area: 1 / 1 / 1 / 3;
+  }
+  #contatto {
+    grid-area: 2 / 1 / 3 / 1;
+  }
+  #infoUtili {
+    grid-area: 2 / 2 / 3 / 2;
+    padding: 0 2rem;
+  }
+  #infoUtili h3 {
+    font-size: 120%;
+  }
+  #infoUtili p {
+    padding-block: 1rem;
+  }
+  #contatto .pulsante {
+    width: 60%;
+    height: 18%;
+  }
+}
